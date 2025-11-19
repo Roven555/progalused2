@@ -26,7 +26,7 @@ function renderScores() {
     kpiCount.textContent = currentScores.length;
 }
 
-// 2. samm – Lisa +5 kõigile (map)
+
 function addBonus() {
     currentScores = currentScores.map(function (score) {
         return score + 5;
@@ -35,7 +35,7 @@ function addBonus() {
     renderScores();
 }
 
-// 3. samm – Filtreeri punktid ≥ 60 (filter)
+
 function filterByThreshold() {
     currentScores = currentScores.filter(function (score) {
         return score >= 60;
@@ -44,7 +44,7 @@ function filterByThreshold() {
     renderScores();
 }
 
-// 4. samm – Arvuta keskmine tulemus (reduce)
+
 function showAverage() {
     if (currentScores.length === 0) {
         kpiAvg.textContent = "–";
@@ -59,7 +59,7 @@ function showAverage() {
     kpiAvg.textContent = avg.toFixed(1);
 }
 
-// 5. samm – Taasta algseis
+
 function resetAll() {
     currentScores = [...scores];
     renderScores();
@@ -67,7 +67,7 @@ function resetAll() {
     result.textContent = "";
 }
 
-// 6. samm - Genereeri uued skoorid ja kuva
+
 function makeRandom() {
     const count = Number(countInput.value);
 
